@@ -1,11 +1,5 @@
-@font-face {
-  font-family: SecularOne;
-  src: url(SecularOne-Regular.ttf);
-}
-
-@font-face {
-  font-family: Montserrat;
-  src: url(Montserrat-Regular.ttf);
+body {
+  opacity: 1 !important;
 }
 
 :root {
@@ -26,28 +20,13 @@
   font-family: Montserrat;
 }
 
-/** Nav bar */
 
-.navbar-logo {
-  --navbar-logo-size: $spacing-unit * 3;
-  width: $spacing-unit * 3;
-  height: $spacing-unit * 3;
-
-  margin: $spacing-unit / 2;
-
-  transition: all 0.35s;
-}
-
-.navbar-logo img {
-  width: 100%;
-  height: 100%;
-}
 
 /** HERO */
 
 .hero {
   position: absolute;
-  top: 4*$spacing-unit;
+  top: 6*$spacing-unit;
   margin: $spacing-unit 4*$spacing-unit;
   transition: all 0.35s;
   max-width: $content-width*.6;
@@ -55,6 +34,7 @@
 
   @include media-query($on-palm) {
     margin: $spacing-unit $spacing-unit;
+    top: 4*$spacing-unit
   }
 }
 
@@ -94,13 +74,13 @@
   z-index: 2;
   position: relative;
   margin-top: $spacing-unit * 4;
-  margin-bottom: calc(var(--base-unit) * 30);
+  //margin-bottom: calc(var(--base-unit) * 30);
   opacity: 0;
   transition: all 0.35s;
 }
 
 section {
-  margin-bottom: $spacing-unit * 2;
+  margin-bottom: $spacing-unit * 3.5;
 }
 
 /** SERVICES */
@@ -118,28 +98,17 @@ section {
   align-items: center;
   margin-bottom: $spacing-unit;
   margin-left: $spacing-unit;
-  max-width: 13 * $spacing-unit;
+  margin-right: $spacing-unit;
+  //max-width: 15 * $spacing-unit;
 }
 
 .service div:first-child {
   margin-right: $spacing-unit;
 }
 
-.service div:first-child img {
-  box-shadow: -5px 1px 5px #aaaaaa;
-}
-
-.service div:last-child img {
-  box-shadow: 5px 1px 5px #aaaaaa;
-}
-
-.service-image {
-  width: calc(var(--base-unit) * 20);
-}
-
-.service-image img {
+.service-image svg {
   width: 100%;
-  border-radius: var(--base-unit);
+  height: auto;
 }
 
 /* PORTFOLIO **/
@@ -148,14 +117,20 @@ section {
   box-sizing: border-box;
   height: $spacing-unit * 8;
   width: 100%;
-  background-color: $brand-color;
+  background-color: lighten($brand-color, 10%);
   display: flex;
   flex-direction: row;
+  margin-bottom: $spacing-unit *.5;
+  overflow: hidden;
 
   @include media-query($on-palm) {
     height: $spacing-unit * 12;
   }
 
+}
+
+.portfolio:hover div:last-child {
+  bottom: 0;
 }
 
 .portfolio div:first-child  {
@@ -169,23 +144,37 @@ section {
 
 .portfolio div:last-child  {
   margin-top: auto;
-  height: $spacing-unit * 6;
-  flex: 1;
+  width: $spacing-unit * 4;
   margin-right: $spacing-unit;
+  transition: all .5s;
+  position: relative;
+  bottom: -1 * $spacing-unit;
 }
 
 .portfolio div:last-child img {
   float: right;
-  height: 100%;
-  width: auto;
+  height: auto;
+}
+
+
+.portfolio-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.portfolio-row .portfolio:first-child {
+  display: flex;
+  flex-direction: row;
+  margin-right: $spacing-unit *.5;
+
 }
 
 /* Footer */
 
 .footer {
   padding: $spacing-unit;
-  height: $spacing-unit * 2;
-  background-color: $brand-color;
+  min-height: $spacing-unit * 2;
+  background-color: lighten($brand-color, 10%);
 }
 
 

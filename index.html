@@ -31,7 +31,7 @@ layout: default
   <section class="services">
     <div class="service">
       <div class="service-image">
-        <img src="assets/graphs.jpg" alt="Consulting">
+        {%- include websearch.svg -%}
       </div>
       <div class="service-description">
         <h3>Website Development and Tweaks</h3>
@@ -47,12 +47,12 @@ layout: default
           offer full frontend and backend development services.</p>
       </div>
       <div class="service-image">
-        <img src="assets/code.jpg" alt="Consulting">
+        {%- include code_inspection.svg -%}
       </div>
     </div>
     <div class="service">
       <div class="service-image si1">
-        <img src="assets/shopify.jpg" alt="Consulting">
+        {%- include shopping.svg -%}
       </div>
       <div class="service-description">
         <h3>eCommerce Integration</h3>
@@ -70,7 +70,7 @@ layout: default
           including MySQL, PostGres, SqlLite and MongoDB. </p>
       </div>
       <div class="service-image">
-        <img src="assets/consult.jpg" alt="Database Management">
+        {%- include spreadsheet.svg -%}
       </div>
     </div>
   </section>
@@ -84,11 +84,38 @@ layout: default
         <p>Elph Ceramics needed a customisation app to let customers make the
           most of their ceramic range and some help customising their shopify
           page to match their branding.</p>
-          <br/>
-          <a>Click to learn more</a>
+        <br />
+        <a>Click to learn more</a>
       </div>
       <div>
         <img src="assets/Elphimage.png" alt="Elph store">
+      </div>
+    </div>
+
+    <div class="portfolio-row">
+
+      <div class="portfolio">
+        <div>
+          <h3>Tasty Paws</h3>
+          <p>It's a dog eat dog world so dogs should eat bones instead. This needs to be shorter than elf.</p>
+          <br />
+          <a>Click to learn more</a>
+        </div>
+        <div>
+          <img src="assets/Elphimage.png" alt="Elph store">
+        </div>
+      </div>
+
+      <div class="portfolio">
+        <div>
+          <h3>Less Tasty Paws</h3>
+          <p>It's a dog eat dog world so dogs should eat bones instead. This needs to be shorter than elf.</p>
+          <br />
+          <a>Click to learn more</a>
+        </div>
+        <div>
+          <img src="assets/Elphimage.png" alt="Elph store">
+        </div>
       </div>
     </div>
 
@@ -97,7 +124,7 @@ layout: default
   <div id="contact" class="anchor"></div>
   <section>
     <h2>Contact</h2>
-    <p> To arrange a consultation get in contact via:
+    <p> To arrange a consultation please call or email:
       <h3>Phone: 0452530192</h3>
       <h3>Email: hello@exeterwebservices.com.au</h3>
   </section>
